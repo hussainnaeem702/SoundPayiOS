@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
     s.platform              = :ios
     s.ios.deployment_target = '12.0'
-    s.name                  = "SoundPayiOS"
+    s.name                  = "SoundPay"
     s.summary               = "Data transfer over sound"
     s.requires_arc          = true
     
     
     s.version               = "1.0.0"
     
-    s.license               = { :type => "MIT", :file => "LICENSE" }
+    s.license               = { :type => 'MIT', :file => 'LICENSE' }
     
     
     s.author                = { "AKSA-SDS" => "hussainnaeem702@gmail.com" }
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
     }
 
-    s.source_files       = 'Shared/*.{swift,h,m}'
+    s.source_files       = 'SoundPay/**/*.{h,m, swift, cpp, hpp}' #'Classes/*.{h,m, swift, cpp, hpp}'
     
     s.swift_version         = "4.2"
     
