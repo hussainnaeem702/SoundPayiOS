@@ -12,12 +12,16 @@
 
 #define NUM_BUFFERS 3
 
+@protocol SoundPaySdkDelegate <NSObject>
+- (void)didReceivedString:(NSString*)message;
+@end
+
 typedef struct
 {
     int ggwaveId;
     bool isCapturing;
     UILabel * labelReceived;
-
+    id <SoundPaySdkDelegate> sDelegate;
     AudioQueueRef queue;
     AudioStreamBasicDescription dataFormat;
     AudioQueueBufferRef buffers[NUM_BUFFERS];
@@ -44,13 +48,13 @@ typedef struct
     StateOut stateOut;
 }
 
-- (void)togglePlayback;
+@property (nonatomic, weak) id <SoundPaySdkDelegate> delegate;
++ (SoundPaySDK*)sharedInstance;
 - (void)stopPlayback;
 - (void)togglePlayback: (const char *) message;
 - (void) stopCapturing;
-- (void)config;
+//- (void)config;
 
 
 @end
-
 

@@ -28,6 +28,7 @@ void AudioOutputCallback(void * inUserData,
 
 
 @implementation SoundPaySDK
+@synthesize delegate;
 
 - (void)setupAudioFormat:(AudioStreamBasicDescription*)format
 {
@@ -42,8 +43,17 @@ void AudioOutputCallback(void * inUserData,
     format->mFormatFlags = kLinearPCMFormatFlagIsSignedInteger;
 }
 
-- (void)config
++ (SoundPaySDK*)sharedInstance
 {
+    SoundPaySDK * shared = [[SoundPaySDK alloc] init];
+    return shared;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+   
+    NSLog(@"Initilizer called");
     [self setupAudioFormat:&stateInp.dataFormat];
     [self setupAudioFormat:&stateOut.dataFormat];
 
@@ -72,7 +82,44 @@ void AudioOutputCallback(void * inUserData,
 
         printf("GGWave playback instance initialized - instance id = %d\n", stateOut.ggwaveId);
     }
+
+    stateInp.sDelegate = delegate;
+    
+    return  self;
 }
+
+//- (void)config
+//{
+//
+//    [self setupAudioFormat:&stateInp.dataFormat];
+//    [self setupAudioFormat:&stateOut.dataFormat];
+//
+//    // initialize the GGWave instances:
+//
+//    // RX
+//    {
+//        ggwave_Parameters parameters = ggwave_getDefaultParameters();
+//
+//        parameters.sampleFormatInp = GGWAVE_SAMPLE_FORMAT_I16;
+//        parameters.sampleFormatOut = GGWAVE_SAMPLE_FORMAT_I16;
+//
+//        stateInp.ggwaveId = ggwave_init(parameters);
+//
+//        printf("GGWave capture instance initialized - instance id = %d\n", stateInp.ggwaveId);
+//    }
+//
+//    // TX
+//    {
+//        ggwave_Parameters parameters = ggwave_getDefaultParameters();
+//
+//        parameters.sampleFormatInp = GGWAVE_SAMPLE_FORMAT_I16;
+//        parameters.sampleFormatOut = GGWAVE_SAMPLE_FORMAT_I16;
+//
+//        stateOut.ggwaveId = ggwave_init(parameters);
+//
+//        printf("GGWave playback instance initialized - instance id = %d\n", stateOut.ggwaveId);
+//    }
+//}
 
 -(void) stopCapturing
 {
@@ -221,7 +268,8 @@ void AudioInputCallback(void * inUserData,
 
     // check if a message has been received
     if (ret > 0) {
-        stateInp->labelReceived.text = [@"Received: " stringByAppendingString:[NSString stringWithFormat:@"%s", decoded]];
+        //stateInp->labelReceived.text = [@"Received: " stringByAppendingString:[NSString stringWithFormat:@"%s", decoded]];
+        [stateInp->sDelegate didReceivedString:[NSString stringWithFormat:@"%s", decoded]];
     }
 
     // put the buffer back in the queue
