@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.platform              = :ios
     s.ios.deployment_target = '12.0'
-    s.name                  = "SoundPayiOS"
+    s.name                  = "SoundPay"
     s.summary               = "Data transfer over sound"
     s.requires_arc          = true
     
