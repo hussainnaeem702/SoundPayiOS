@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ggwave-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ggerganov/ggwave-spm",
+      "state" : {
+        "branch" : "master",
+        "revision" : "d32dbb2e7974cb4b0cf381db4fc7800e1938e181"
+      }
+    }
+  ],
+  "version" : 2
+}
