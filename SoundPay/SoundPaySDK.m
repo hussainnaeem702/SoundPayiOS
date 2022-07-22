@@ -6,7 +6,7 @@
 //
 
 #import "SoundPaySDK.h"
-#import "ggwave/ggwave.h"
+#import "ggwave.h"
 
 #define NUM_BYTES_PER_BUFFER 16*1024
 

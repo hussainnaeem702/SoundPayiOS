@@ -22,8 +22,13 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
     }
 
-    s.source_files       = 'SoundPay/**/*.{h,m, swift, cpp, hpp}' #'Classes/*.{h,m, swift, cpp, hpp}'
+    s.source_files       = 'SoundPay/**/*.{h,m}' 
+    s.source_files       = 'SoundPay/Sources/test-objc/**/*.{m}'
+    s.source_files       = 'SoundPay/Sources/ggwave/**/*.{h, txt, cpp}'
+    s.source_files       = 'SoundPay/Sources/ggwave/include/ggwave/**/*.{h}'
+    s.source_files       = 'SoundPay/Sources/ggwave/reed-solomon/**/*.{hpp}'
+
     
-    s.swift_version         = "4.2"
+    s.swift_version      = "4.2"
     
 end

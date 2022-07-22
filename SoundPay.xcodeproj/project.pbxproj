@@ -13,7 +13,16 @@
 		3D8817642887F8610062E2DF /* SoundPay.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8817562887F8600062E2DF /* SoundPay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D8817722887FD9F0062E2DF /* SoundPaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D8817702887FD9E0062E2DF /* SoundPaySDK.h */; };
 		3D8817732887FD9F0062E2DF /* SoundPaySDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8817712887FD9F0062E2DF /* SoundPaySDK.m */; };
-		3D8817792887FEB70062E2DF /* ggwave in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8817782887FEB70062E2DF /* ggwave */; };
+		3DC959A5288ABB59002F012C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC95996288ABB59002F012C /* main.m */; };
+		3DC959A6288ABB59002F012C /* fft.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC95998288ABB59002F012C /* fft.h */; };
+		3DC959A7288ABB59002F012C /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DC95999288ABB59002F012C /* CMakeLists.txt */; };
+		3DC959A8288ABB59002F012C /* ggwave.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC9599C288ABB59002F012C /* ggwave.h */; };
+		3DC959AA288ABB59002F012C /* gf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DC9599F288ABB59002F012C /* gf.hpp */; };
+		3DC959AB288ABB59002F012C /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DC959A0288ABB59002F012C /* rs.hpp */; };
+		3DC959AC288ABB59002F012C /* poly.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DC959A1288ABB59002F012C /* poly.hpp */; };
+		3DC959AD288ABB59002F012C /* resampler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC959A2288ABB59002F012C /* resampler.h */; };
+		3DC959AE288ABB59002F012C /* ggwave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC959A3288ABB59002F012C /* ggwave.cpp */; };
+		3DC959AF288ABB59002F012C /* resampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC959A4288ABB59002F012C /* resampler.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,16 @@
 		3D8817622887F8610062E2DF /* SoundPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundPayTests.m; sourceTree = "<group>"; };
 		3D8817702887FD9E0062E2DF /* SoundPaySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundPaySDK.h; sourceTree = "<group>"; };
 		3D8817712887FD9F0062E2DF /* SoundPaySDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundPaySDK.m; sourceTree = "<group>"; };
+		3DC95996288ABB59002F012C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DC95998288ABB59002F012C /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
+		3DC95999288ABB59002F012C /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		3DC9599C288ABB59002F012C /* ggwave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggwave.h; sourceTree = "<group>"; };
+		3DC9599F288ABB59002F012C /* gf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gf.hpp; sourceTree = "<group>"; };
+		3DC959A0288ABB59002F012C /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rs.hpp; sourceTree = "<group>"; };
+		3DC959A1288ABB59002F012C /* poly.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = poly.hpp; sourceTree = "<group>"; };
+		3DC959A2288ABB59002F012C /* resampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resampler.h; sourceTree = "<group>"; };
+		3DC959A3288ABB59002F012C /* ggwave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ggwave.cpp; sourceTree = "<group>"; };
+		3DC959A4288ABB59002F012C /* resampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resampler.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8817792887FEB70062E2DF /* ggwave in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +98,7 @@
 				3D8817562887F8600062E2DF /* SoundPay.h */,
 				3D8817702887FD9E0062E2DF /* SoundPaySDK.h */,
 				3D8817712887FD9F0062E2DF /* SoundPaySDK.m */,
+				3DC95994288ABB59002F012C /* Sources */,
 				3D8817572887F8600062E2DF /* SoundPay.docc */,
 			);
 			path = SoundPay;
@@ -93,6 +112,63 @@
 			path = SoundPayTests;
 			sourceTree = "<group>";
 		};
+		3DC95994288ABB59002F012C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3DC95995288ABB59002F012C /* test-objc */,
+				3DC95997288ABB59002F012C /* ggwave */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3DC95995288ABB59002F012C /* test-objc */ = {
+			isa = PBXGroup;
+			children = (
+				3DC95996288ABB59002F012C /* main.m */,
+			);
+			path = "test-objc";
+			sourceTree = "<group>";
+		};
+		3DC95997288ABB59002F012C /* ggwave */ = {
+			isa = PBXGroup;
+			children = (
+				3DC95998288ABB59002F012C /* fft.h */,
+				3DC95999288ABB59002F012C /* CMakeLists.txt */,
+				3DC9599A288ABB59002F012C /* include */,
+				3DC9599D288ABB59002F012C /* reed-solomon */,
+				3DC959A2288ABB59002F012C /* resampler.h */,
+				3DC959A3288ABB59002F012C /* ggwave.cpp */,
+				3DC959A4288ABB59002F012C /* resampler.cpp */,
+			);
+			path = ggwave;
+			sourceTree = "<group>";
+		};
+		3DC9599A288ABB59002F012C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9599B288ABB59002F012C /* ggwave */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3DC9599B288ABB59002F012C /* ggwave */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9599C288ABB59002F012C /* ggwave.h */,
+			);
+			path = ggwave;
+			sourceTree = "<group>";
+		};
+		3DC9599D288ABB59002F012C /* reed-solomon */ = {
+			isa = PBXGroup;
+			children = (
+				3DC9599F288ABB59002F012C /* gf.hpp */,
+				3DC959A0288ABB59002F012C /* rs.hpp */,
+				3DC959A1288ABB59002F012C /* poly.hpp */,
+			);
+			path = "reed-solomon";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,8 +176,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC959AC288ABB59002F012C /* poly.hpp in Headers */,
+				3DC959AA288ABB59002F012C /* gf.hpp in Headers */,
+				3DC959AB288ABB59002F012C /* rs.hpp in Headers */,
+				3DC959A6288ABB59002F012C /* fft.h in Headers */,
+				3DC959AD288ABB59002F012C /* resampler.h in Headers */,
 				3D8817722887FD9F0062E2DF /* SoundPaySDK.h in Headers */,
 				3D8817642887F8610062E2DF /* SoundPay.h in Headers */,
+				3DC959A8288ABB59002F012C /* ggwave.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +205,6 @@
 			);
 			name = SoundPay;
 			packageProductDependencies = (
-				3D8817782887FEB70062E2DF /* ggwave */,
 			);
 			productName = SoundPay;
 			productReference = 3D8817532887F8600062E2DF /* SoundPay.framework */;
@@ -175,7 +256,6 @@
 			);
 			mainGroup = 3D8817492887F8600062E2DF;
 			packageReferences = (
-				3D8817772887FEB70062E2DF /* XCRemoteSwiftPackageReference "ggwave-spm" */,
 			);
 			productRefGroup = 3D8817542887F8600062E2DF /* Products */;
 			projectDirPath = "";
@@ -192,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC959A7288ABB59002F012C /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC959AF288ABB59002F012C /* resampler.cpp in Sources */,
+				3DC959AE288ABB59002F012C /* ggwave.cpp in Sources */,
 				3D8817582887F8600062E2DF /* SoundPay.docc in Sources */,
+				3DC959A5288ABB59002F012C /* main.m in Sources */,
 				3D8817732887FD9F0062E2DF /* SoundPaySDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,25 +555,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3D8817772887FEB70062E2DF /* XCRemoteSwiftPackageReference "ggwave-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ggerganov/ggwave-spm";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3D8817782887FEB70062E2DF /* ggwave */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D8817772887FEB70062E2DF /* XCRemoteSwiftPackageReference "ggwave-spm" */;
-			productName = ggwave;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D88174A2887F8600062E2DF /* Project object */;
 }
