@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     
     s.source                = {
     :git => "https://github.com/hussainnaeem702/SoundPayiOS.git",
-    :branch => 'master',
+    :branch => 'main',
     :tag => "#{s.version}"
     }
 
