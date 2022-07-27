@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.platform              = :ios
     s.ios.deployment_target = '12.0'
-    s.name                  = "SoundPay"
+    s.name                  = "SoundPayiOS"
     s.summary               = "Data transfer over sound"
     s.requires_arc          = true
     
@@ -22,11 +22,10 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
     }
 
-    s.source_files       = 'SoundPay/**/*.{h,m}' 
-    s.source_files       = 'SoundPay/Sources/test-objc/**/*.{m}'
-    s.source_files       = 'SoundPay/Sources/ggwave/**/*.{h, txt, cpp}'
-    s.source_files       = 'SoundPay/Sources/ggwave/include/ggwave/**/*.{h}'
-    s.source_files       = 'SoundPay/Sources/ggwave/reed-solomon/**/*.{hpp}'
+    s.source_files       = 'SoundPayiOS/**/*.{h,m}' 
+    s.source_files       = 'SoundPayiOS/ggwave-iOS/**/*.{h, txt, cpp}'
+    s.source_files       = 'SoundPayiOS/ggwave-iOS/include/ggwave/**/*.{h}'
+    s.source_files       = 'SoundPayiOS/ggwave-iOS/reed-solomon/**/*.{hpp}'
 
     
     s.swift_version      = "4.2"

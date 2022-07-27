@@ -10,10 +10,12 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioQueue.h>
 
+
 #define NUM_BUFFERS 3
 
 @protocol SoundPaySdkDelegate <NSObject>
 - (void)didReceivedString:(NSString*)message;
+- (void)didEndSentData;
 @end
 
 typedef struct
@@ -21,7 +23,7 @@ typedef struct
     int ggwaveId;
     bool isCapturing;
     UILabel * labelReceived;
-    id <SoundPaySdkDelegate> sDelegate;
+    
     AudioQueueRef queue;
     AudioStreamBasicDescription dataFormat;
     AudioQueueBufferRef buffers[NUM_BUFFERS];
@@ -35,7 +37,7 @@ typedef struct
     int totalBytes;
     NSMutableData * waveform;
     UILabel * labelStatus;
-
+    
     AudioQueueRef queue;
     AudioStreamBasicDescription dataFormat;
     AudioQueueBufferRef buffers[NUM_BUFFERS];
@@ -48,11 +50,13 @@ typedef struct
     StateOut stateOut;
 }
 
-@property (nonatomic, weak) id <SoundPaySdkDelegate> delegate;
-+ (SoundPaySDK*)sharedInstance;
+//@property (nonatomic, weak) id <SoundPaySdkDelegate> delegate;
+//+ (SoundPaySDK*)sharedInstance;
+//- (void)LoadData;
 - (void)stopPlayback;
-- (void)togglePlayback: (const char *) message;
+- (void)startPlayback: (const char *) message;
 - (void) stopCapturing;
+- (void)startCapture;
 //- (void)config;
 
 

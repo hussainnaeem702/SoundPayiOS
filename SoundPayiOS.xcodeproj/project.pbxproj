@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D260F5528916A7B0014C671 /* SoundPayiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F5428916A7B0014C671 /* SoundPayiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D260F6828916AB70014C671 /* fft.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F5C28916AB70014C671 /* fft.h */; };
+		3D260F6928916AB70014C671 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D260F5D28916AB70014C671 /* CMakeLists.txt */; };
+		3D260F6A28916AB70014C671 /* ggwave.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D260F5E28916AB70014C671 /* ggwave.mm */; };
+		3D260F6B28916AB70014C671 /* ggwave.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F6128916AB70014C671 /* ggwave.h */; };
+		3D260F6C28916AB70014C671 /* resampler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D260F6228916AB70014C671 /* resampler.mm */; };
+		3D260F6D28916AB70014C671 /* gf.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F6428916AB70014C671 /* gf.hpp */; };
+		3D260F6E28916AB70014C671 /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F6528916AB70014C671 /* rs.hpp */; };
+		3D260F6F28916AB70014C671 /* poly.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F6628916AB70014C671 /* poly.hpp */; };
+		3D260F7028916AB70014C671 /* resampler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F6728916AB70014C671 /* resampler.h */; };
+		3D260F7328916AF10014C671 /* SoundPaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D260F7128916AF10014C671 /* SoundPaySDK.h */; };
+		3D260F7428916AF10014C671 /* SoundPaySDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D260F7228916AF10014C671 /* SoundPaySDK.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D260F5128916A7B0014C671 /* SoundPayiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundPayiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D260F5428916A7B0014C671 /* SoundPayiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundPayiOS.h; sourceTree = "<group>"; };
+		3D260F5C28916AB70014C671 /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
+		3D260F5D28916AB70014C671 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		3D260F5E28916AB70014C671 /* ggwave.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ggwave.mm; sourceTree = "<group>"; };
+		3D260F6128916AB70014C671 /* ggwave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggwave.h; sourceTree = "<group>"; };
+		3D260F6228916AB70014C671 /* resampler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = resampler.mm; sourceTree = "<group>"; };
+		3D260F6428916AB70014C671 /* gf.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gf.hpp; sourceTree = "<group>"; };
+		3D260F6528916AB70014C671 /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rs.hpp; sourceTree = "<group>"; };
+		3D260F6628916AB70014C671 /* poly.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = poly.hpp; sourceTree = "<group>"; };
+		3D260F6728916AB70014C671 /* resampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resampler.h; sourceTree = "<group>"; };
+		3D260F7128916AF10014C671 /* SoundPaySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPaySDK.h; sourceTree = "<group>"; };
+		3D260F7228916AF10014C671 /* SoundPaySDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundPaySDK.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D260F4E28916A7B0014C671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D260F4728916A7B0014C671 = {
+			isa = PBXGroup;
+			children = (
+				3D260F5328916A7B0014C671 /* SoundPayiOS */,
+				3D260F5228916A7B0014C671 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D260F5228916A7B0014C671 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F5128916A7B0014C671 /* SoundPayiOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D260F5328916A7B0014C671 /* SoundPayiOS */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F5428916A7B0014C671 /* SoundPayiOS.h */,
+				3D260F7128916AF10014C671 /* SoundPaySDK.h */,
+				3D260F7228916AF10014C671 /* SoundPaySDK.m */,
+				3D260F5B28916AB70014C671 /* ggwave-iOS */,
+			);
+			path = SoundPayiOS;
+			sourceTree = "<group>";
+		};
+		3D260F5B28916AB70014C671 /* ggwave-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F5C28916AB70014C671 /* fft.h */,
+				3D260F5D28916AB70014C671 /* CMakeLists.txt */,
+				3D260F5E28916AB70014C671 /* ggwave.mm */,
+				3D260F5F28916AB70014C671 /* include */,
+				3D260F6228916AB70014C671 /* resampler.mm */,
+				3D260F6328916AB70014C671 /* reed-solomon */,
+				3D260F6728916AB70014C671 /* resampler.h */,
+			);
+			path = "ggwave-iOS";
+			sourceTree = "<group>";
+		};
+		3D260F5F28916AB70014C671 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F6028916AB70014C671 /* ggwave */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3D260F6028916AB70014C671 /* ggwave */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F6128916AB70014C671 /* ggwave.h */,
+			);
+			path = ggwave;
+			sourceTree = "<group>";
+		};
+		3D260F6328916AB70014C671 /* reed-solomon */ = {
+			isa = PBXGroup;
+			children = (
+				3D260F6428916AB70014C671 /* gf.hpp */,
+				3D260F6528916AB70014C671 /* rs.hpp */,
+				3D260F6628916AB70014C671 /* poly.hpp */,
+			);
+			path = "reed-solomon";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3D260F4C28916A7B0014C671 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D260F7328916AF10014C671 /* SoundPaySDK.h in Headers */,
+				3D260F6F28916AB70014C671 /* poly.hpp in Headers */,
+				3D260F6E28916AB70014C671 /* rs.hpp in Headers */,
+				3D260F5528916A7B0014C671 /* SoundPayiOS.h in Headers */,
+				3D260F7028916AB70014C671 /* resampler.h in Headers */,
+				3D260F6D28916AB70014C671 /* gf.hpp in Headers */,
+				3D260F6828916AB70014C671 /* fft.h in Headers */,
+				3D260F6B28916AB70014C671 /* ggwave.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3D260F5028916A7B0014C671 /* SoundPayiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D260F5828916A7B0014C671 /* Build configuration list for PBXNativeTarget "SoundPayiOS" */;
+			buildPhases = (
+				3D260F4C28916A7B0014C671 /* Headers */,
+				3D260F4D28916A7B0014C671 /* Sources */,
+				3D260F4E28916A7B0014C671 /* Frameworks */,
+				3D260F4F28916A7B0014C671 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundPayiOS;
+			productName = SoundPayiOS;
+			productReference = 3D260F5128916A7B0014C671 /* SoundPayiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D260F4828916A7B0014C671 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					3D260F5028916A7B0014C671 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3D260F4B28916A7B0014C671 /* Build configuration list for PBXProject "SoundPayiOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D260F4728916A7B0014C671;
+			productRefGroup = 3D260F5228916A7B0014C671 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D260F5028916A7B0014C671 /* SoundPayiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D260F4F28916A7B0014C671 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D260F6928916AB70014C671 /* CMakeLists.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D260F4D28916A7B0014C671 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D260F6A28916AB70014C671 /* ggwave.mm in Sources */,
+				3D260F7428916AF10014C671 /* SoundPaySDK.m in Sources */,
+				3D260F6C28916AB70014C671 /* resampler.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3D260F5628916A7B0014C671 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D260F5728916A7B0014C671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D260F5928916A7B0014C671 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3RX4E9DU8W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weather.app.SoundPayiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3D260F5A28916A7B0014C671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3RX4E9DU8W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weather.app.SoundPayiOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D260F4B28916A7B0014C671 /* Build configuration list for PBXProject "SoundPayiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D260F5628916A7B0014C671 /* Debug */,
+				3D260F5728916A7B0014C671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D260F5828916A7B0014C671 /* Build configuration list for PBXNativeTarget "SoundPayiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D260F5928916A7B0014C671 /* Debug */,
+				3D260F5A28916A7B0014C671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D260F4828916A7B0014C671 /* Project object */;
+}

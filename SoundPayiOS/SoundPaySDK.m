@@ -28,7 +28,7 @@ void AudioOutputCallback(void * inUserData,
 
 
 @implementation SoundPaySDK
-@synthesize delegate;
+//@synthesize delegate;
 
 - (void)setupAudioFormat:(AudioStreamBasicDescription*)format
 {
@@ -43,17 +43,17 @@ void AudioOutputCallback(void * inUserData,
     format->mFormatFlags = kLinearPCMFormatFlagIsSignedInteger;
 }
 
-+ (SoundPaySDK*)sharedInstance
-{
-    SoundPaySDK * shared = [[SoundPaySDK alloc] init];
-    return shared;
-}
+//+ (SoundPaySDK*)sharedInstance
+//{
+//    SoundPaySDK * shared = [[SoundPaySDK alloc] init];
+//    return shared;
+//}
 
 - (instancetype)init
 {
     self = [super init];
-   
-    NSLog(@"Initilizer called");
+    
+    NSLog(@"Initializer called ... ");
     [self setupAudioFormat:&stateInp.dataFormat];
     [self setupAudioFormat:&stateOut.dataFormat];
 
@@ -83,10 +83,46 @@ void AudioOutputCallback(void * inUserData,
         printf("GGWave playback instance initialized - instance id = %d\n", stateOut.ggwaveId);
     }
 
-    stateInp.sDelegate = delegate;
+    //stateInp.sDelegate = delegate;
+    //stateOut.sDelegate = delegate;
     
-    return  self;
+    return self;
 }
+
+//- (void)LoadData
+//{
+//    [self setupAudioFormat:&stateInp.dataFormat];
+//    [self setupAudioFormat:&stateOut.dataFormat];
+//
+//    // initialize the GGWave instances:
+//
+//    // RX
+//    {
+//        ggwave_Parameters parameters = ggwave_getDefaultParameters();
+//
+//        parameters.sampleFormatInp = GGWAVE_SAMPLE_FORMAT_I16;
+//        parameters.sampleFormatOut = GGWAVE_SAMPLE_FORMAT_I16;
+//
+//        stateInp.ggwaveId = ggwave_init(parameters);
+//
+//        printf("GGWave capture instance initialized - instance id = %d\n", stateInp.ggwaveId);
+//    }
+//
+//    // TX
+//    {
+//        ggwave_Parameters parameters = ggwave_getDefaultParameters();
+//
+//        parameters.sampleFormatInp = GGWAVE_SAMPLE_FORMAT_I16;
+//        parameters.sampleFormatOut = GGWAVE_SAMPLE_FORMAT_I16;
+//
+//        stateOut.ggwaveId = ggwave_init(parameters);
+//
+//        printf("GGWave playback instance initialized - instance id = %d\n", stateOut.ggwaveId);
+//    }
+//
+//    stateInp.sDelegate = delegate;
+//    stateOut.sDelegate = delegate;
+//}
 
 //- (void)config
 //{
@@ -135,7 +171,7 @@ void AudioOutputCallback(void * inUserData,
     AudioQueueDispose(stateInp.queue, true);
 }
 
-- (void)toggleCapture {
+- (void)startCapture {
     if (stateInp.isCapturing) {
         [self stopCapturing];
 
@@ -164,6 +200,7 @@ void AudioOutputCallback(void * inUserData,
         stateInp.isCapturing = true;
         status = AudioQueueStart(stateInp.queue, NULL);
         if (status == 0) {
+            NSLog(@"Capturing starts ... ");
             //_labelStatusInp.text = @"Status: Capturing";
             //[sender setTitle:@"Stop Capturing" forState:UIControlStateNormal];
         }
@@ -187,7 +224,7 @@ void AudioOutputCallback(void * inUserData,
     AudioQueueDispose(stateOut.queue, true);
 }
 
-- (void)togglePlayback: (const char *) message{
+- (void)startPlayback: (const char *) message{
     if (stateOut.isPlaying) {
         [self stopPlayback];
         
@@ -206,7 +243,7 @@ void AudioOutputCallback(void * inUserData,
 
         const int ret = ggwave_encode(stateOut.ggwaveId, payload, len, GGWAVE_PROTOCOL_ULTRASOUND_FAST, 10, [stateOut.waveform mutableBytes], 0);
 
-        if (2*ret != n) {
+        if (ret != n) {
             printf("failed to encode the message '%s', n = %d, ret = %d\n", payload, n, ret);
             return;
         }
@@ -269,7 +306,17 @@ void AudioInputCallback(void * inUserData,
     // check if a message has been received
     if (ret > 0) {
         //stateInp->labelReceived.text = [@"Received: " stringByAppendingString:[NSString stringWithFormat:@"%s", decoded]];
-        [stateInp->sDelegate didReceivedString:[NSString stringWithFormat:@"%s", decoded]];
+        NSLog(@"Data received is: %s", decoded);
+        NSString *str = [NSString stringWithFormat:@"%s", decoded];
+//        [SharedDelegate.delegate didReceivedString:[NSString stringWithFormat:@"%s", decoded]];
+        
+        NSDictionary *dict = @{ @"sdk_title" : @"Data Received successfully",
+                                @"string_message" : str
+                                
+        };
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"SoundPaySdkNotificationObserver" object:nil userInfo:dict];
+        
     }
 
     // put the buffer back in the queue
@@ -306,10 +353,21 @@ void AudioOutputCallback(void * inUserData,
         if (stateOut->isPlaying) {
             printf("Stopping playback\n");
             AudioQueueStop(stateOut->queue, false);
-            stateOut->isPlaying = false;
-            stateOut->labelStatus.text = @"Status: Idle";
+            
+            NSDictionary *dict = @{ @"sdk_title" : @"Sound transfered successfully"};
+            [[NSNotificationCenter defaultCenter]
+             postNotificationName:@"SoundPaySdkNotificationObserver" object:nil userInfo:dict];
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//            });
+            
+           
+
+//            stateOut->isPlaying = false;
+//            stateOut->labelStatus.text = @"Status: Idle";
         }
 
         AudioQueueFreeBuffer(stateOut->queue, outBuffer);
     }
 }
+    
